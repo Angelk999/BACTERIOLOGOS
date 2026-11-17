@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacteriólogos en Acción</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <h1>🧬 BACTERIÓLOGOS EN ACCIÓN</h1>
+    <p>Operación Shigella spp.: el misterio microscópico</p>
+</header>
+
+<main class="contenedor">
+
+    <section id="inicio" class="panel">
+        <h2>🔬 Bienvenido al laboratorio</h2>
+        <p>Una investigación científica necesita observación, evidencia y decisiones responsables.</p>
+        <p>Completa cinco misiones para aprender sobre Shigella spp., su transmisión, prevención e identificación.</p>
+        <p><strong>Tu objetivo:</strong> conseguir 100 puntos.</p>
+        <button id="comenzar">Comenzar aventura</button>
+    </section>
+
+    <section id="menu" class="oculto">
+        <div class="panel">
+            <h2>Centro de investigación</h2>
+            <div class="estadisticas">
+                <p>⭐ Puntos: <span id="puntos">0</span></p>
+                <p>❤️ Vidas: <span id="vidas">3</span></p>
+                <p>🏅 Misiones: <span id="avance">0/5</span></p>
+            </div>
+            <div class="barra">
+                <div id="progreso"></div>
+            </div>
+        </div>
+
+        <h2>Mapa de misiones</h2>
+        <div id="listaMisiones"></div>
+    </section>
+
+    <section id="juego" class="panel oculto">
+        <p id="numeroMision"></p>
+        <h2 id="tituloMision"></h2>
+        <p id="historia"></p>
+        <h3 id="pregunta"></h3>
+        <div id="opciones"></div>
+        <p id="retroalimentacion"></p>
+        <button id="siguiente" class="oculto">Continuar</button>
+        <button id="salirMenu" class="secundario">Volver al mapa</button>
+    </section>
+
+    <section id="final" class="panel oculto">
+        <h2>🏆 ¡Investigación completada!</h2>
+        <p id="mensajeFinal"></p>
+        <p id="resultadoFinal"></p>
+        <button id="reiniciar">Jugar nuevamente</button>
+    </section>
+
+</main>
+
+<section class="panel">
+    <h2>📚 Fuentes científicas y créditos</h2>
+
+    <p>La información de este videojuego tiene fines educativos. Las misiones de laboratorio son simulaciones y no representan resultados de muestras reales.</p>
+
+    <ol>
+        <li>
+            Organización Mundial de la Salud.
+            <a href="https://www.who.int/es/news-room/fact-sheets/detail/e-coli" target="_blank" rel="noopener">
+                E. coli
+            </a>.
+        </li>
+
+        <li>
+            Centers for Disease Control and Prevention.
+            <a href="https://www.cdc.gov/ecoli/prevention/" target="_blank" rel="noopener">
+                How to Prevent E. coli Infection
+            </a>.
+        </li>
+
+        <li>
+            Centers for Disease Control and Prevention.
+            <a href="https://www.cdc.gov/ecoli/php/laboratories/index.html" target="_blank" rel="noopener">
+                Laboratory Testing for E. coli
+            </a>.
+        </li>
+
+        <li>
+            U.S. Food and Drug Administration.
+            <a href="https://www.fda.gov/media/183681/download?attachment=" target="_blank" rel="noopener">
+                Bacteriological Analytical Manual, Chapter 4A: Diarrheagenic Escherichia coli
+            </a>.
+        </li>
+
+        <li>
+            Clinical and Laboratory Standards Institute.
+            <a href="https://clsi.org/shop/standards/m100/" target="_blank" rel="noopener">
+                Performance Standards for Antimicrobial Susceptibility Testing (M100)
+            </a>.
+        </li>
+    </ol>
+
+    <p><strong>Desarrollo:</strong> Proyecto escolar Bacteriólogos en Acción.</p>
+    <p><strong>Programación:</strong> HTML, CSS y JavaScript.</p>
+</section>
+<footer>
+    <p>Proyecto educativo | Bacteriología | Simulación documental</p>
+    <p>Este juego no sustituye la valoración de profesionales de la salud.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

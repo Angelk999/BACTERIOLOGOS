@@ -1,0 +1,160 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #071a2b;
+    color: #f4f8fb;
+}
+
+.encabezado {
+    text-align: center;
+    padding: 25px 15px;
+    background: #103b52;
+    border-bottom: 3px solid #20d6c2;
+}
+
+.encabezado h1 {
+    color: #20d6c2;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.panel {
+    background: #12344a;
+    padding: 25px;
+    border: 1px solid #20d6c2;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #20d6c2;
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: bold;
+    color: #ffd166;
+}
+
+.barra {
+    width: 100%;
+    height: 16px;
+    background: #344b5c;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progreso {
+    width: 0%;
+    height: 100%;
+    background: #20c997;
+    transition: width 0.4s;
+}
+
+.tarjeta {
+    background: #16445b;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #20d6c2;
+}
+
+.tarjeta h3 {
+    color: #20d6c2;
+}
+
+.tarjeta.bloqueada {
+    opacity: 0.5;
+}
+
+.estado {
+    font-size: 13px;
+    color: #ffd166;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #20c997;
+    color: #062b2a;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffd166;
+}
+
+button:disabled {
+    background: #52616b;
+    color: white;
+    cursor: not-allowed;
+}
+
+.secundario {
+    background: #52616b;
+    color: white;
+}
+
+.opcion {
+    background: #24536b;
+    color: white;
+    border: 1px solid #20d6c2;
+    text-align: left;
+}
+
+.opcion:disabled {
+    opacity: 0.8;
+}
+
+.correcta {
+    background: #176b50 !important;
+}
+
+.incorrecta {
+    background: #873f4b !important;
+}
+
+#retroalimentacion {
+    min-height: 45px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #a9c4d0;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .estadisticas {
+        flex-direction: column;
+    }
+
+    .encabezado h1 {
+        font-size: 23px;
+    }
+}
