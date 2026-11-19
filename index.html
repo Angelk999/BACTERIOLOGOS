@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacteriólogos en Acción</title>
+    <title>Bacteriólogos en Acción - Operación Shigella</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
 <header class="encabezado">
     <h1>🧬 BACTERIÓLOGOS EN ACCIÓN</h1>
     <p>Operación Shigella spp.: el misterio microscópico</p>
+    <p>Liliana Muñoz López</p>
 </header>
 
 <main class="contenedor">
@@ -18,8 +19,8 @@
     <section id="inicio" class="panel">
         <h2>🔬 Bienvenido al laboratorio</h2>
         <p>Una investigación científica necesita observación, evidencia y decisiones responsables.</p>
-        <p>Completa cinco misiones para aprender sobre Shigella spp., su transmisión, prevención e identificación.</p>
-        <p><strong>Tu objetivo:</strong> conseguir 100 puntos.</p>
+        <p>Completa cinco misiones para aprender sobre <strong>Shigella spp.</strong>, su transmisión, prevención e identificación.</p>
+        <p><strong>Tu objetivo:</strong> conseguir 100 puntos y desbloquear los <strong>2 minijuegos de laboratorio</strong>.</p>
         <button id="comenzar">Comenzar aventura</button>
     </section>
 
@@ -55,49 +56,100 @@
         <h2>🏆 ¡Investigación completada!</h2>
         <p id="mensajeFinal"></p>
         <p id="resultadoFinal"></p>
-        <button id="reiniciar">Jugar nuevamente</button>
+
+        <!-- SECCIÓN DE MINIJUEGOS DESBLOQUEABLES -->
+        <div id="zonaMinijuegos" class="oculto">
+            <hr class="divisor">
+            <h3>🎮 ¡Minijuegos de Laboratorio Desbloqueados!</h3>
+            <p>Has demostrado tus conocimientos sobre <em>Shigella spp.</em> Elige un desafío extra para reforzar lo aprendido:</p>
+            
+            <div class="selector-minijuegos">
+                <button id="btnAbrirMemorama" class="btn-minijuego">🧠 Minijuego 1: Memorama Shigella</button>
+                <button id="btnAbrirRompecabezas" class="btn-minijuego">🧩 Minijuego 2: Rompecabezas Microscópico</button>
+            </div>
+
+            <!-- MINIJUEGO 1: MEMORAMA -->
+            <div id="contenedorMemorama" class="caja-minijuego oculto">
+                <h4>🧠 Memorama: Conceptos clave de Shigella spp.</h4>
+                <p class="subtexto">Encuentra los 6 pares relacionando cada concepto con su definición científica.</p>
+                <div class="info-mini">
+                    <span>Pares encontrados: <strong id="paresEncontrados">0/6</strong></span>
+                    <span>Intentos: <strong id="intentosMemorama">0</strong></span>
+                </div>
+                <div id="tableroMemorama" class="grid-memorama"></div>
+                <p id="mensajeMemorama" class="mensaje-exito"></p>
+                <button id="reiniciarMemorama" class="secundario">Reiniciar Memorama</button>
+            </div>
+
+            <!-- MINIJUEGO 2: ROMPECABEZAS -->
+            <div id="contenedorRompecabezas" class="caja-minijuego oculto">
+                <h4>🧩 Rompecabezas de Laboratorio (3x3)</h4>
+                <p class="subtexto">Haz clic en una pieza adyacente al espacio vacío para reconstruir la imagen científica.</p>
+                
+                <div class="controles-puzzle">
+                    <label for="selectorImagen">Selecciona imagen:</label>
+                    <select id="selectorImagen">
+                        <option value="0">1. Bacilos de Shigella spp. (Microscopía)</option>
+                        <option value="1">2. Prevención: Lavado de manos</option>
+                        <option value="2">3. Cultivo en Agar MacConkey</option>
+                    </select>
+                </div>
+
+                <div class="area-puzzle">
+                    <div id="tableroRompecabezas" class="grid-puzzle"></div>
+                    <div class="guia-puzzle">
+                        <p>Imagen guía:</p>
+                        <img id="imagenGuia" src="" alt="Vista previa del rompecabezas">
+                    </div>
+                </div>
+                <p id="mensajePuzzle" class="mensaje-exito"></p>
+                <button id="mezclarPuzzle" class="secundario">Mezclar piezas</button>
+            </div>
+        </div>
+
+        <button id="reiniciar" style="margin-top: 25px;">Jugar nuevamente desde cero</button>
     </section>
 
 </main>
 
-<section class="panel">
+<section class="panel contenedor">
     <h2>📚 Fuentes científicas y créditos</h2>
 
     <p>La información de este videojuego tiene fines educativos. Las misiones de laboratorio son simulaciones y no representan resultados de muestras reales.</p>
 
-    <ol>
+    <ol class="lista-referencias">
         <li>
-            Organización Mundial de la Salud.
-            <a href="https://www.who.int/es/news-room/fact-sheets/detail/e-coli" target="_blank" rel="noopener">
-                E. coli
+            Centers for Disease Control and Prevention (CDC). (2024).
+            <a href="https://www.cdc.gov/shigella/about/index.html" target="_blank" rel="noopener">
+                About Shigella Infection (Shigellosis)
             </a>.
         </li>
 
         <li>
-            Centers for Disease Control and Prevention.
-            <a href="https://www.cdc.gov/ecoli/prevention/" target="_blank" rel="noopener">
-                How to Prevent E. coli Infection
+            Centers for Disease Control and Prevention (CDC). (2024).
+            <a href="https://www.cdc.gov/shigella/hcp/clinical-overview/index.html" target="_blank" rel="noopener">
+                Clinical Overview of Shigellosis
             </a>.
         </li>
 
         <li>
-            Centers for Disease Control and Prevention.
-            <a href="https://www.cdc.gov/ecoli/php/laboratories/index.html" target="_blank" rel="noopener">
-                Laboratory Testing for E. coli
+            Encyclopaedia Britannica. (2024).
+            <a href="https://www.britannica.com/science/Shigella" target="_blank" rel="noopener">
+                Shigella | Classification, Characteristics & Disease
             </a>.
         </li>
 
         <li>
-            U.S. Food and Drug Administration.
-            <a href="https://www.fda.gov/media/183681/download?attachment=" target="_blank" rel="noopener">
-                Bacteriological Analytical Manual, Chapter 4A: Diarrheagenic Escherichia coli
+            U.S. Food and Drug Administration (FDA). (2023).
+            <a href="https://www.fda.gov/food/laboratory-methods-food/bam-chapter-6-shigella" target="_blank" rel="noopener">
+                Bacteriological Analytical Manual (BAM), Chapter 6: Shigella
             </a>.
         </li>
 
         <li>
-            Clinical and Laboratory Standards Institute.
-            <a href="https://clsi.org/shop/standards/m100/" target="_blank" rel="noopener">
-                Performance Standards for Antimicrobial Susceptibility Testing (M100)
+            Organización Mundial de la Salud (OMS). (2023).
+            <a href="https://www.who.int/es/news-room/fact-sheets/detail/diarrhoeal-disease" target="_blank" rel="noopener">
+                Enfermedades diarreicas: prevención y control
             </a>.
         </li>
     </ol>
@@ -105,6 +157,7 @@
     <p><strong>Desarrollo:</strong> Proyecto escolar Bacteriólogos en Acción.</p>
     <p><strong>Programación:</strong> HTML, CSS y JavaScript.</p>
 </section>
+
 <footer>
     <p>Proyecto educativo | Bacteriología | Simulación documental</p>
     <p>Este juego no sustituye la valoración de profesionales de la salud.</p>
